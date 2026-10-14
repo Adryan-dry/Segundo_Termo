@@ -71,11 +71,14 @@ WHERE id_categoria = 5
 
 
 -- 10. Altere o status do pedido criado para 'PREPARANDO'.
-
+UPDATE pedido
+SET status = 'PREPARANDO'
+WHERE id_pedido = 4
 
 
 -- 11. Atualize valor_total do pedido de acordo com os itens cadastrados.
 --     Você pode calcular previamente com SELECT SUM(quantidade * preco_unitario).
+
 
 
 -- 12. Escolha um dos produtos criados e faça uma exclusão lógica (ativo = FALSE).
@@ -97,3 +100,45 @@ WHERE id_categoria = 5
 
 
 -- 16. Crie uma categoria temporária chamada 'Excluir Depois' e remova-a.
+
+
+-- PARTE D - INTEGRIDADE E VALIDAÇÃO
+
+-- 17. Tente inserir um produto usando uma categoria inexistente.
+
+
+-- 18. Tente cadastrar um cliente usando um e-mail que já existe.
+
+
+-- 19. Tente criar um pedido para um cliente inexistente.
+
+
+-- 20. Para cada erro, identifique qual restrição foi responsável.
+
+
+-- PARTE E - DESAFIO COMPLETO
+
+-- 21. Inicie uma transação.
+
+
+-- 22. Cadastre um cliente, um pedido e dois itens relacionados.
+
+
+-- 23. Consulte os dados criados através de JOIN.
+
+
+-- 24. Execute ROLLBACK e prove com SELECT que os novos registros foram desfeitos.
+
+
+-- 25. Repita o processo e finalize com COMMIT.
+
+
+
+-- =========================================================================================
+-- CHECKLIST --
+-- Consigo inserir uma ou várias linhas.
+-- Entendo AUTO_INCREMENT, DEFAULT e NULL. (só não entendo direito a função do AUTO_INCREMENT)
+-- Consigo atualizar uma ou várias linhas com segurança.
+-- Nunca executo UPDATE ou DELETE sem conferir o WHERE.
+-- Consigo manipular registros relacionados.
+-- Sei utilizar COMMIT e ROLLBACK como apoio às operações.

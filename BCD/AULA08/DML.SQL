@@ -171,9 +171,42 @@ SET TELEFONE = NULL
 WHERE ID_CLIENTE = 5;
 -- TUDO ATUALIZAÇÕES OU MODIFICAÇÃO DE DADOS
 
+-- =========================================================================================
+-- MENSAGEM DE SUCESSO
+SELECT 'BANCO DE DADOS SMARTCOFFEE CRIADO COM SUCESSO!' AS MENSAGEM
+
+-- TRANSAÇÕES -- SEGURANÇA E INTEGRIDADE DOS DADOS
+START TRANSACTION
+UPDATE produto
+SET preco = preco * 1,50
+WHERE id_categoria = 1
+
+SELECT ID_PRODUTO, NOME, PRECO
+FROM produto
+WHERE id_categoria = 1
+
+-- DESFAZER AÇÕES
+ROLLBACK
+
+-- REALIZAR OU CONFIRMAR A AÇÃO
+COMMIT
 
 
+-- EX 2:
+START TRANSACTION
+UPDATE cliente
+SET cidade = 'LIMEIRA'
+WHERE id_cliente = 3
 
---==========================================================================
--- PARTE A  : INSERT
+COMMIT
 
+ROLLBACK
+
+-- =========================================================================================
+-- CHECKLIST --
+-- Consigo inserir uma ou várias linhas.
+-- Entendo AUTO_INCREMENT, DEFAULT e NULL. (só não entendo direito a função do AUTO_INCREMENT)
+-- Consigo atualizar uma ou várias linhas com segurança.
+-- Nunca executo UPDATE ou DELETE sem conferir o WHERE.
+-- Consigo manipular registros relacionados.
+-- Sei utilizar COMMIT e ROLLBACK como apoio às operações.
