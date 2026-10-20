@@ -1,10 +1,9 @@
--- Active: 1788351689620@@127.0.0.1@3306@smartcoffee_dml_beatriz
 -- Smartcoffee base de dados - DML
 -- execute sempre que quiser restaurar a aula
 
-DROP DATABASE IF EXISTS SMARTCOFFEE_DML_BEATRIZ;
-CREATE DATABASE SMARTCOFFEE_DML_BEATRIZ;
-USE SMARTCOFFEE_DML_BEATRIZ;
+DROP DATABASE IF EXISTS SMARTCOFFEE_DML_ADRYAN;
+CREATE DATABASE SMARTCOFFEE_DML_ADRYAN;
+USE SMARTCOFFEE_DML_ADRYAN;
 
 CREATE TABLE CLIENTE (
     ID_CLIENTE INT PRIMARY KEY AUTO_INCREMENT,
@@ -202,11 +201,3 @@ COMMIT
 
 ROLLBACK
 
--- =========================================================================================
--- CHECKLIST --
--- Consigo inserir uma ou várias linhas.
--- Entendo AUTO_INCREMENT, DEFAULT e NULL. (só não entendo direito a função do AUTO_INCREMENT)
--- Consigo atualizar uma ou várias linhas com segurança.
--- Nunca executo UPDATE ou DELETE sem conferir o WHERE.
--- Consigo manipular registros relacionados.
--- Sei utilizar COMMIT e ROLLBACK como apoio às operações.

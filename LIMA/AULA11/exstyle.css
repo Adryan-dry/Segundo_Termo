@@ -1,0 +1,13 @@
+.ex1-grid{
+    /* <EX1> */
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+
+    /* <EX2> */
+    /* grid-template-columns: repeat(2, 1fr); */
+
+    /* <EX3> */
+    grid-template-columns: 2fr 1fr;
+    
+
+}
