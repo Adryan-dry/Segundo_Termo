@@ -3,9 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>The Classic - Vintage Patty</title>
+  <!-- Liga este HTML ao arquivo de estilo (CSS) -->
+  <link rel="stylesheet" href="styleproduto.css">
 </head>
+ 
 <body>
-  
+ 
+  <!-- 1. CABEÇALHO: igual ao do cardápio, para o site ficar com a mesma cara -->
+  <header class="cabecalho">
+    <h1>Vintage Patty</h1>
+    <p>Uma viagem deliciosa aos anos 80!</p>
+  </header>
+ 
+  <!-- 2. MENU: links para as outras páginas (troque pelos nomes reais dos arquivos do grupo) -->
+  <nav class="menu">
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="cardapio.html">Cardápio</a></li>
+      <li><a href="#">Promoções</a></li>
+      <li><a href="#">Login</a></li>
+    </ul>
+  </nav>
+ 
+  <!-- 3. CONTEÚDO PRINCIPAL: tudo o que é só desta página fica dentro de <main> -->
+  <main>
+ 
+    <!-- Link para voltar -->
+    <a class="voltar" href="cardapio.html">&larr; Voltar ao cardápio</a>
+ 
+    <!-- Produto: foto de um lado, informações do outro -->
+    <article class="produto">
+ 
+      <img src="imagens/the-classic.jpg" alt="Hambúrguer The Classic">
+ 
+      <div class="info">
+        <h2>The Classic</h2>
+        <p class="descricao">O sabor tradicional que nunca sai de moda. Hambúrguer de carne bovina, queijo derretido, alface, tomate e molho especial da casa.</p>
+        <p class="preco">R$ 22,90</p>
+ 
+        <!-- Formulário: o cliente escolhe as opções do pedido -->
+        <form class="pedido">
+ 
+          <fieldset>
+            <legend>Escolha o acompanhamento</legend>
+            <label><input type="radio" name="acompanhamento" value="batata" checked> Batatas Cadillac (incluso)</label>
+            <label><input type="radio" name="acompanhamento" value="aneis"> Senhor dos Anéis + R$ 4,00</label>
+            <label><input type="radio" name="acompanhamento" value="nenhum"> Sem acompanhamento</label>
+          </fieldset>
+ 
+          <label for="observacao">Alguma observação?</label>
+          <textarea id="observacao" name="observacao" rows="3" maxlength="140" placeholder="Ex.: sem cebola, molho à parte"></textarea>
+ 
+          <label for="quantidade">Quantidade</label>
+          <input id="quantidade" name="quantidade" type="number" min="1" max="10" value="1">
+ 
+          <button type="submit">Adicionar ao pedido</button>
+        </form>
+      </div>
+ 
+    </article>
+ 
+    <!-- Informações extras -->
+    <section class="detalhes">
+      <h3>Ingredientes</h3>
+      <ul>
+        <li>Pão de brioche</li>
+        <li>Hambúrguer bovino 150 g</li>
+        <li>Queijo prato</li>
+        <li>Alface e tomate</li>
+        <li>Molho especial da casa</li>
+      </ul>
+ 
+      <h3>Informações</h3>
+      <p>Tempo de preparo: cerca de 15 minutos.</p>
+      <p>Contém glúten e lactose.</p>
+    </section>
+ 
+  </main>
+ 
+  <!-- 4. RODAPÉ -->
+  <footer class="rodape">
+    <p>Vintage Patty &copy; 2026 - Feito com carinho pela nossa equipe</p>
+  </footer>
+ 
 </body>
 </html>

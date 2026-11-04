@@ -1,0 +1,193 @@
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eee9e1;
+    color: #222;
+}
+
+
+/* CABEÇALHO */
+
+.produto-header {
+    background-color: #171717;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 5%;
+}
+
+.produto-header h1 {
+    color: #f44336;
+    font-size: 25px;
+}
+
+.produto-header nav {
+    display: flex;
+    gap: 25px;
+}
+
+.produto-header a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.produto-header a:hover {
+    color: #f44336;
+}
+
+
+/* ÁREA PRINCIPAL */
+
+.produto-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 50px;
+
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 30px;
+}
+
+
+/* IMAGEM DO PRODUTO */
+
+.produto-imagem {
+    width: 50%;
+}
+
+.produto-imagem img {
+    width: 100%;
+    height: 400px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+}
+
+
+/* INFORMAÇÕES */
+
+.produto-info {
+    width: 50%;
+}
+
+.produto-categoria {
+    color: #c0392b;
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.produto-info h2 {
+    font-size: 35px;
+    color: #7b2525;
+    margin-bottom: 20px;
+}
+
+.produto-descricao {
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.produto-info h3 {
+    margin-bottom: 12px;
+    color: #7b2525;
+}
+
+.produto-info ul {
+    padding-left: 20px;
+    line-height: 2;
+}
+
+
+/* PREÇO */
+
+.produto-preco {
+    font-size: 28px;
+    font-weight: bold;
+    color: #c0392b;
+    margin: 25px 0;
+}
+
+
+/* BOTÃO */
+
+.botao-voltar {
+    display: inline-block;
+
+    background-color: #f44336;
+    color: white;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    padding: 13px 25px;
+    border-radius: 25px;
+
+    transition: 0.3s;
+}
+
+.botao-voltar:hover {
+    background-color: #a52a2a;
+    transform: scale(1.05);
+}
+
+
+/* RODAPÉ */
+
+.produto-footer {
+    background-color: #171717;
+    color: white;
+
+    text-align: center;
+    padding: 25px;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    .produto-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .produto-header nav {
+        gap: 15px;
+    }
+
+    .produto-container {
+        flex-direction: column;
+        margin: 20px auto;
+        gap: 25px;
+    }
+
+    .produto-imagem,
+    .produto-info {
+        width: 100%;
+    }
+
+    .produto-imagem img {
+        height: 280px;
+    }
+
+    .produto-info h2 {
+        font-size: 28px;
+    }
+
+}
