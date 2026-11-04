@@ -1,0 +1,312 @@
+/* /* Variáveis
+Podemos guardar cores em um único local */
+
+:root {
+    /* Paleta de cores */
+    --expresso: #460C00;
+    --café: #983109;
+    --caramelo: #B84E10;
+    --creme: #D2832A;
+    --marfim: #a2a07f;
+    /* --taupe: #9A887A; */
+    --texto: #100502;
+    --branco: #FFFFFF;
+
+    /* Fontes ou tipografia */
+    --fonte-principal: Arial, sans-serif;
+    --fonte-secundaria: "Poppins", Helvetica;
+
+    /* Espaçamentos */
+    --espaco-pequeno: 4px;
+    --espaco-small: 8px;
+    --espaco-medium: 16px;
+    --espaco-large: 24px;
+    --espaco-xlarge: 48px;
+    --espaco-xxlarge: 80px;
+
+/* Obs: root é responsável por disponibilizar um espaço para cadastro de variáveis do elemento raiz do documento. Variáveis CSS globais. */
+}
+
+/* Ajustes Iniciais */
+/* Configuração Padrão com regras gerais*/
+* {
+    box-sizing: border-box;
+    /* Aplicar configuração geral em todo o documento */   
+}
+
+html {
+    scroll-behavior: smooth;
+    /* Ajuste visual scroll mais lento ou ajustável ao html */
+}
+
+body {
+    background-color: var(--marfim); /* Corrigido: ajustado para o fundo claro do site */
+    font-family: var(--fonte-principal);
+    color: var(--texto);
+    line-height: 1.6;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ----------------------------------------------------------------------- */
+/* Hierarquia de fontes */
+h1, h2, h3 {
+    margin-top: 0;
+    color: var(--expresso);
+    font-family: var(--fonte-secundaria);
+}
+h1 {
+    font-size: 3rem; /* Corrigido: 'font: size' para 'font-size' */
+    line-height: 1.1;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.25rem;
+}
+
+/* Identificado como o topo/menu "Smart Coffee" */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: var(--marfim); /* Ajustado para corresponder ao topo claro da imagem */
+}
+
+/* Nome da marca "Smart Coffee" */
+.Visual {
+    color: var(--caramelo); /* Ajustado para a cor laranja do logo na imagem */
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    color: var(--texto); /* Ajustado para o texto escuro dos links */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.menu a:hover {
+    color: var(--caramelo);
+    /* Representa o estado em que o cursor passa sobre o elemento */
+}
+
+.menu a:focus-visible {
+    outline: 3px groove var(--caramelo);
+    outline-offset: 4px;
+}
+
+/* Primeira Seção: "Café que conecta pessoas" */
+.banner {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    padding: var(--espaco-xlarge) 8%;
+    background-color: var(--marfim);
+}
+
+/* Div de conteúdo textual interna do banner */
+.banner-conteudo {
+    flex: 1;
+}
+
+.banner-imagem {
+    flex: 1;
+    margin: 0;
+}
+
+.banner-imagem img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* Botões de ação (Ex: "Ver cardápio", "Conheça o espaço") */
+.marca-reg {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 12px 24px;
+    background-color: var(--caramelo);
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 50px; /* Bordas arredondadas estilo pílula igual à imagem */
+    transition: background-color 0.3s ease;
+}
+
+.marca-reg:hover {
+    background-color: var(--café); /* Corrigido de var(--cafe) para var(--café) */
+}
+
+/* Segunda Seção: "Sobre nós" (Inverte a ordem na imagem) */
+.sobre {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse; /* Inverte para a imagem ficar na esquerda e texto na direita */
+    gap: 48px;
+    padding: var(--espaco-xxlarge) 8%;
+    background-color: var(--marfim);
+}
+
+.sobre-conteudo {
+    flex: 1;
+}
+
+.sobre-imagem {
+    flex: 1;
+    margin: 0;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    border-radius: 18px;
+}
+
+/* Botão vazado usado no "Saiba mais" da seção Sobre Nós */
+.sobre .marca-reg {
+    background-color: transparent;
+    border: 2px solid var(--caramelo);
+    color: var(--caramelo);
+}
+
+.sobre .marca-reg:hover {
+    background-color: var(--caramelo);
+    color: var(--branco);
+}
+
+/* Terceira Seção: "Nossos cafés" (Container centralizado) */
+.produtos {
+    padding: var(--espaco-xxlarge) 8%;
+    background-color: var(--creme); /* Tom levemente diferenciado ao fundo */
+    text-align: center;
+}
+
+.produtos h2 {
+    margin-bottom: var(--espaco-large);
+}
+
+/* Grid que comporta os 3 cards de café da imagem */
+.lista-marca {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estrutura interna de cada Card de produto */
+.img-cartao {
+    height: 100%;
+    padding: 20px;
+    background-color: var(--branco);
+    border: 1px solid var(--creme);
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(53, 25, 4, 0.05);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-cartao img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.img-cartao h3 {
+    margin-bottom: 8px;
+}
+
+.img-cartao p {
+    font-size: 0.9rem;
+    color: var(--taupe);
+    margin-bottom: 12px;
+}
+
+/* Preço destacado no rodapé do card */
+.preco-produto {
+    font-weight: 700;
+    color: var(--texto);
+    font-size: 1.1rem;
+}
+
+.img-cartao:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(43, 23, 13, 0.12);
+}
+
+/* Quarta Seção: Seção Escura ("Um espaço para boas ideias") */
+.ambiente {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    padding: var(--espaco-xxlarge) 8%;
+    background-color: var(--expresso); /* Fundo marrom escuro conforme a imagem */
+    color: var(--branco);
+}
+
+.ambiente h2 {
+    color: var(--branco);
+}
+
+.ambiente-conteudo {
+    flex: 1;
+}
+
+.ambiente-imagem {
+    flex: 1;
+}
+
+.ambiente-imagem img {
+    width: 100%;
+    border-radius: 18px;
+}
+
+/* Quinta Seção: Formulário de Contato ("Fale com a gente") */
+.contato {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    padding: var(--espaco-xxlarge) 8%;
+    background-color: var(--marfim);
+}
+
+.contato-conteudo {
+    flex: 1;
+}
+
+.contato-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contato-formulario input,
+.contato-formulario textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--taupe);
+    border-radius: 6px;
+    background-color: var(--branco);
+    font-family: var(--fonte-principal);
+}
+
+.contato-formulario button {
+    align-self: flex-start;
+}
